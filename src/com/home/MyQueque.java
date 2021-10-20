@@ -1,11 +1,14 @@
 package com.home;
 
-public class MyQueque implements MyQueques {
-    String[][]Users=new String[10][10];
+import javax.jws.soap.SOAPBinding;
 
+public class MyQueque implements MyQueques {
+    String[]Users=new String[10];
     @Override
     public String userElement() {
-
+        Users[0]="Vasya";
+        Users[1]="Petya";
+        Users[2]="Sasha";
         return null;
     }
 
