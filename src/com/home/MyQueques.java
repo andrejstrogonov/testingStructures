@@ -1,7 +1,9 @@
 package com.home;
 
 public interface MyQueques {
-    <nullElem> boolean add(String nullElem);
-    <laselement> boolean remove(String laselement);
-    void calculatedim();
+    String userElement();
+    String removeUser();
+    boolean offerUser(Object user);
+    String peekUser();
+    String pollUser();
 }

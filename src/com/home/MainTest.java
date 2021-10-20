@@ -15,16 +15,8 @@ class MainTest {
 
     @Test
     void main() {
-        add("Hello");
-        remove("Hello");
 
 
-    }
 
-    private void remove(String hello) {
-
-    }
-
-    private void add(String hello) {
     }
 }

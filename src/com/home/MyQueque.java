@@ -1,33 +1,36 @@
 package com.home;
 
 public class MyQueque implements MyQueques {
-    private int dim;
-    String[]data=new String[dim];
+    public int id;
+    public String name;
+    public int age;
+    public void User(String name, int age, int id){
+        this.age=age;
+        this.name=name;
+        this.id=id;
+    }
     @Override
-    public boolean add(String nullElem) {
-        String[]data1=new String[data.length+1];
-        for (int i = 0; i < data1.length - 1; i++){
-            data1[i < dim ? i : i + 1] = data[i];}
-        data1[dim]= java.lang.String.valueOf(add("nullElem"));
-        return true;
+    public String userElement() {
+        return null;
     }
 
     @Override
-    public boolean remove(String laselement) {
-        String[]data2=new String[data.length-1];
-        for (int i = 0; i < data2.length; i++){
-            data2[i < dim ? i : i + 1] = data[i];}
-        data2[dim]= java.lang.String.valueOf(remove("laselement"));
+    public String removeUser() {
+        return null;
+    }
+
+    @Override
+    public boolean offerUser(Object user) {
         return false;
     }
-    @Override
-    public  void calculatedim(){
-        if (add("nullElem")==true){
-            dim+=1;
-        }
-        if(remove("laselement")==true){
-            dim-=1;
-        }
 
+    @Override
+    public String peekUser() {
+        return null;
+    }
+
+    @Override
+    public String pollUser() {
+        return null;
     }
 }
