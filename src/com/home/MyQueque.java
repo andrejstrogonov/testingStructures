@@ -1,16 +1,11 @@
 package com.home;
 
 public class MyQueque implements MyQueques {
-    public int id;
-    public String name;
-    public int age;
-    public void User(String name, int age, int id){
-        this.age=age;
-        this.name=name;
-        this.id=id;
-    }
+    String[][]Users=new String[10][10];
+
     @Override
     public String userElement() {
+
         return null;
     }
 
@@ -20,7 +15,7 @@ public class MyQueque implements MyQueques {
     }
 
     @Override
-    public boolean offerUser(Object user) {
+    public boolean offerUser(Object User) {
         return false;
     }
 
