@@ -6,6 +6,7 @@ public class MyQueque implements MyQueques {
     public int nElem;
     public int front;
     public int rear;
+
     public MyQueque(int maxSize){
         this.maxSize=maxSize;
         users=new String[maxSize];
@@ -35,7 +36,7 @@ public class MyQueque implements MyQueques {
         return true;
     }
     @Override
-    public String peekUser(String  elem) {
+    public String peekUser(String elem) {
         return users[front];
     }
     @Override
