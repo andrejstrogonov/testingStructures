@@ -15,8 +15,10 @@ class MainTest {
 
     @Test
     void main() {
-
-
-
+        MyQueque users = new MyQueque(5);
+        users.offerUser("Nastya");
+        users.peekUser("Nastya");
+        users.pollUser();
+        users.userElement();
     }
 }
