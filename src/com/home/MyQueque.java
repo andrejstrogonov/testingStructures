@@ -1,51 +1,36 @@
 package com.home;
 
-public class MyQueque implements MyQueques {
-    public String[]users;
-    public int maxSize;
-    public int nElem;
-    public int front;
-    public int rear;
+import java.util.LinkedList;
+import java.util.List;
 
-    public MyQueque(int maxSize){
-        this.maxSize=maxSize;
-        users=new String[maxSize];
-        rear=-1;
-        front=0;
-        nElem=0;
+public class MyQueque<T> implements ArmQueque<T> {
+    private final List<T> queue;
+    public static final int START = 0;
+
+    public MyQueque() {
+        queue = new LinkedList<>();
     }
+
     @Override
-    public String userElement() {
-        return users[front];
-    }
-    @Override
-    public String removeUser() {
-        String temp=users[front++];
-        if(front==maxSize){
-            front=0;
+    public void push(T e) {
+        if (e != null && e != "") {
+            queue.add(e);
         }
-        nElem--;
-        return temp;
     }
+
     @Override
-    public boolean offerUser(String elem) {
-        if(rear ==maxSize-1){
-            rear=-1;
+    public T pull() throws MyException {
+        if (queue.isEmpty()) {
+            throw new MyException();
+        } else {
+            T result = queue.get(START);
+            queue.remove(START);
+            return result;
         }
-        users[++rear]=elem;
-        return true;
     }
+
     @Override
-    public String peekUser(String elem) {
-        return users[front];
-    }
-    @Override
-    public String pollUser() {
-        String temp=users[front++];
-        if(front==maxSize){
-            front=0;
-        }
-        nElem--;
-        return users[front];
+    public int getSize() {
+        return queue.size();
     }
 }
